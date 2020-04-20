@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-void main()
+void main5()
 {
 	ifstream inFile;
 	ofstream outFlie;
