@@ -1,8 +1,9 @@
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
+#include "../include/program1_5.h"
 using namespace std;
-void main5()
+int program1_5::publicInterface()
 {
 	ifstream inFile;
 	ofstream outFlie;
@@ -14,10 +15,11 @@ void main5()
 	inFile.open("..//iofiles//out.txt", ios::in | ios::_Nocreate);
 	if (!inFile) {
 		cerr << "不能打开 iofiles\out.txt" << endl;
-		exit(1);
+		return 1;
 	}
 	char c;
 	inFile >> name >> c >> number;
 	outFlie << "name: " << name << endl;
 	outFlie << "number: " << number << endl;
+	return 0;
 }

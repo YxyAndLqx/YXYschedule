@@ -1,9 +1,8 @@
 #include <iostream>
+#include "../include/progtam1_8.h"
 using namespace std;
-int squareByValue(int);
-void squareByReference(int&);
 
-int main()
+int program1_8::publicInterface(void)
 {
 	int x = 2, z = 4;
 	cout << "求平方值前 x = " << x << endl << "用squareByValue求平方值"
@@ -13,7 +12,8 @@ int main()
 	squareByReference(z);
 	cout << "求平方值后 z = " << z << endl;
 	//求平方值前z=4，求平方值后z=16；
+	return 0;
 }
 
-int squareByValue(int a) { return a *= a; }
-void squareByReference(int& a) { a *= a; }
+int program1_8::squareByValue(int a) { return a *= a; }
+void program1_8::squareByReference(int& a) { a *= a; }

@@ -1,14 +1,14 @@
 #include <iostream>
+#include"../include/program1_7.h"
 using namespace std;
-char& replace(int m);
-char s[80] = "hello world";
-void main7()
+int program1_7::publicInterface(void)
 {
 	replace(4) = 'x';
 	cout << s;
+	return 0;
 }
 
-char& replace(int m)
+char& program1_7::replace(int m)
 {
 	return s[m];
 }
