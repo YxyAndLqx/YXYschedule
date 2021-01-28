@@ -2,11 +2,43 @@
 //
 
 #include <iostream>
-#include "classes/main.h"
-
+using namespace std;
+void printMyName(void);
+void printLong(void);
 int main()
 {
-    std::cout << "Hello World!\n";
+    int tag = 1;
+    int num;
+    while (tag) {
+        cout << "please enter a number:" << endl;
+        cout << "   1:void printMyName(void)\n"
+             << "   2:void printLong(void)\n"
+             << "   0:quit.\n"
+             << ">";
+        cin >> num;
+        switch (num)
+        {
+        case 1 :
+            printMyName();
+            break;
+        case 2:
+            printLong();
+            break;
+        default:
+            tag = 0;
+            break;
+        }
+    }
+}
+void printMyName(void) {
+    std::cout << "杨星煜 " << "成都合院" << std::endl;
+}
+
+void printLong(void) {
+    int destance;
+    cout << "please enter a number(long)\n";
+    cin >> destance;
+    cout << destance * 220 << "mark" << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
