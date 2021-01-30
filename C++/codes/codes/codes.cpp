@@ -6,6 +6,9 @@ using namespace std;
 void printMyName(void);
 void printLong(void);
 void printFourWords(void);
+void printFourWords_1(void);
+void printFourWords_2(void);
+void howOldAreYou(void);
 int main()
 {
     int tag = 1;
@@ -14,6 +17,8 @@ int main()
         cout << "please enter a number:" << endl;
         cout << "   1:void printMyName(void)\n"
              << "   2:void printLong(void)\n"
+             << "   3:void printFourWords(void)\n"
+             << "   4:void howOldAreYou(void)\n"
              << "   0:quit.\n"
              << ">";
         cin >> num;
@@ -24,6 +29,12 @@ int main()
             break;
         case 2:
             printLong();
+            break;
+        case 3:
+            printFourWords();
+            break;
+        case 4:
+            howOldAreYou();
             break;
         default:
             tag = 0;
@@ -43,11 +54,24 @@ void printLong(void) {
 }
 
 void printFourWords(void) {
+    printFourWords_1();
+    printFourWords_1();
+    printFourWords_2();
+    printFourWords_2();
+}
+void printFourWords_1(void) {
     cout << "Three blind mice\n";
-    cout << "Three blind mice\n";
-    cout << "See how they run"
+}
+void printFourWords_2(void) {
+    cout << "See how they run\n";
 }
 
+void howOldAreYou(void) {
+    int years;
+    cout << "Enter your age:";
+    cin >> years;
+    cout << years * 12 << endl;
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
