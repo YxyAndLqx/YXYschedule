@@ -5,6 +5,7 @@
 using namespace std;
 void printMyName(void);
 void printLong(void);
+void printFourWords(void);
 int main()
 {
     int tag = 1;
@@ -39,6 +40,12 @@ void printLong(void) {
     cout << "please enter a number(long)\n";
     cin >> destance;
     cout << destance * 220 << "mark" << endl;
+}
+
+void printFourWords(void) {
+    cout << "Three blind mice\n";
+    cout << "Three blind mice\n";
+    cout << "See how they run"
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
