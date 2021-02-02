@@ -9,6 +9,9 @@ void printFourWords(void);
 void printFourWords_1(void);
 void printFourWords_2(void);
 void howOldAreYou(void);
+void celsiusToFahrenheit(void);
+void howLongIsOneLightYear(void);
+void whatTimeIsIt(void);
 int main()
 {
     int tag = 1;
@@ -19,6 +22,9 @@ int main()
              << "   2:void printLong(void)\n"
              << "   3:void printFourWords(void)\n"
              << "   4:void howOldAreYou(void)\n"
+             << "   5:void celsiusToFahrenheit(void)\n"
+             << "   6:void howLongIsOneLightYear(void)\n"
+             << "   7:void whatTimeIsIt(void)\n"
              << "   0:quit.\n"
              << ">";
         cin >> num;
@@ -35,6 +41,15 @@ int main()
             break;
         case 4:
             howOldAreYou();
+            break;
+        case 5:
+            celsiusToFahrenheit();
+            break;
+        case 6:
+            howLongIsOneLightYear();
+            break;
+        case 7:
+            whatTimeIsIt();
             break;
         default:
             tag = 0;
@@ -71,6 +86,26 @@ void howOldAreYou(void) {
     cout << "Enter your age:";
     cin >> years;
     cout << years * 12 << endl;
+}
+void celsiusToFahrenheit(void) {
+    float celsius = 0;
+    cout << "Please enter a Celsius value:";
+    cin >> celsius;
+    cout << celsius << " degree Celsius is " << 1.8 * celsius + 32.0 << " degree Fahrenheit\n";
+}
+void howLongIsOneLightYear(void) {
+    double lightYear = 0;
+    cout << "Enter the number of light years:";
+    cin >> lightYear;
+    cout << lightYear << " light years = " << lightYear * 63240 << " astronomical units.\n";
+}
+void whatTimeIsIt(void) {
+    int hours, minutes;
+    cout << "Enter the number of hours:";
+    cin >> hours;
+    cout << "Enter the number of minutes:";
+    cin >> minutes;
+    cout << "Time: " << hours << ":" << minutes << endl;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
