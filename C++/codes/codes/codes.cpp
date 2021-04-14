@@ -12,6 +12,7 @@ void howOldAreYou(void);
 void celsiusToFahrenheit(void);
 void howLongIsOneLightYear(void);
 void whatTimeIsIt(void);
+void quickSortProsser(void);
 int main()
 {
     int tag = 1;
@@ -25,6 +26,7 @@ int main()
              << "   5:void celsiusToFahrenheit(void)\n"
              << "   6:void howLongIsOneLightYear(void)\n"
              << "   7:void whatTimeIsIt(void)\n"
+             << "   8:quickSortProsser(void)\n"
              << "   0:quit.\n"
              << ">";
         cin >> num;
@@ -50,6 +52,9 @@ int main()
             break;
         case 7:
             whatTimeIsIt();
+            break;
+        case 8:
+            quickSortProsser();
             break;
         default:
             tag = 0;
@@ -106,6 +111,44 @@ void whatTimeIsIt(void) {
     cout << "Enter the number of minutes:";
     cin >> minutes;
     cout << "Time: " << hours << ":" << minutes << endl;
+}
+void quickSort(int arr[100], int begin, int end) {
+    int i = begin, j = end;
+    int temp;
+    temp = arr[i];
+    if (begin < end) {
+        while (i < j) {
+            while (arr[j] >= temp && i < j) {
+                j--;
+            }
+            arr[i] = arr[j];
+            while (arr[i] <= temp && i < j) {
+                i++;
+            }
+            arr[j] = arr[i];
+        }
+        arr[i] = temp;
+        quickSort(arr, begin, i - 1);
+        quickSort(arr, i+1, end);
+    }
+    else {
+        return;
+    }
+}
+
+void quickSortProsser(void) {
+    cout << "enter an array (data separate with space) :" << endl;
+    int num, arr[100];
+    cin >> num;
+    for (int i = 0; i < num; i++) {
+        cin >> arr[i];
+    }
+    quickSort(arr, 0, num - 1);
+
+    for (int i = 0; i < num; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
