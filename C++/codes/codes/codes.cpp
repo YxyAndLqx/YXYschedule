@@ -13,6 +13,7 @@ void celsiusToFahrenheit(void);
 void howLongIsOneLightYear(void);
 void whatTimeIsIt(void);
 void quickSortProsser(void);
+void howTallYouAre(void);
 int main()
 {
     int tag = 1;
@@ -27,6 +28,7 @@ int main()
              << "   6:void howLongIsOneLightYear(void)\n"
              << "   7:void whatTimeIsIt(void)\n"
              << "   8:quickSortProsser(void)\n"
+             << "   9:howTallYouAre(void)\n"
              << "   0:quit.\n"
              << ">";
         cin >> num;
@@ -55,6 +57,9 @@ int main()
             break;
         case 8:
             quickSortProsser();
+            break;
+        case 9:
+            howTallYouAre();
             break;
         default:
             tag = 0;
@@ -149,6 +154,12 @@ void quickSortProsser(void) {
         cout << arr[i] << " ";
     }
     cout << endl;
+}
+void howTallYouAre(void){
+    cout << "enter your hight_____(in)\b\b\b\b\b\b\b\b\b";
+    int inch = 0;
+    cin >> inch;
+    cout << "you are " << inch / 12.0 << "ft or " << inch <<"in\n";
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
