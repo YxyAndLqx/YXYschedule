@@ -156,10 +156,27 @@ void quickSortProsser(void) {
     cout << endl;
 }
 void howTallYouAre(void){
+    const double InchPerFoot = 12.0;
     cout << "enter your hight_____(in)\b\b\b\b\b\b\b\b\b";
     int inch = 0;
     cin >> inch;
-    cout << "you are " << inch / 12.0 << "ft or " << inch <<"in\n";
+    cout << "you are " << inch / InchPerFoot << "ft or " << inch <<"in\n";
+}
+
+void BMI(void) {
+    const double InchPerFoot = 12;
+    const double MPerInch = 0.0254;
+    const double KgPerPund = 2.2;
+    double hightft, hightin, weght, temp;
+    cout << "pleas enter your hight :\n";
+         << "___ft\b\b\b\b";
+    cin >> hightft;
+    cout << "___in\b\b\b\b";
+    cin >> hightin;
+    cout << "your weght___pd\b\b\b\b";
+    cin >> weght;
+    temp = hightft * InchPerFoot + hightin;
+    cout << "your BMI is: " << weght / (temp *temp) << endl;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
