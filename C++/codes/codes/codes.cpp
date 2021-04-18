@@ -14,6 +14,7 @@ void howLongIsOneLightYear(void);
 void whatTimeIsIt(void);
 void quickSortProsser(void);
 void howTallYouAre(void);
+void BMI(void);
 int main()
 {
     int tag = 1;
@@ -29,6 +30,7 @@ int main()
              << "   7:void whatTimeIsIt(void)\n"
              << "   8:quickSortProsser(void)\n"
              << "   9:howTallYouAre(void)\n"
+             << "   10:void BMI(void)\n"
              << "   0:quit.\n"
              << ">";
         cin >> num;
@@ -60,6 +62,9 @@ int main()
             break;
         case 9:
             howTallYouAre();
+            break;
+        case 10:
+            BMI();
             break;
         default:
             tag = 0;
@@ -169,14 +174,14 @@ void BMI(void) {
     const double KgPerPund = 2.2;
     double hightft, hightin, weght, temp;
     cout << "pleas enter your hight :\n";
-         << "___ft\b\b\b\b";
+    cout << "___ft\b\b\b\b";
     cin >> hightft;
     cout << "___in\b\b\b\b";
     cin >> hightin;
     cout << "your weght___pd\b\b\b\b";
     cin >> weght;
     temp = hightft * InchPerFoot + hightin;
-    cout << "your BMI is: " << weght / (temp *temp) << endl;
+    cout << "your BMI is: " << (weght * KgPerPund) / (temp *temp) << endl;
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
